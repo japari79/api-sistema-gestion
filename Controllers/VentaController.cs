@@ -14,5 +14,11 @@ namespace api_sistema_gestion.Controllers
         {
             ProductoVentaHandle.postProductoVenta(idUsuario, productos);
         }
+
+        [HttpGet("{idUsuario}")]
+        public List<Venta> ConsultarVentas(long idUsuario)
+        {
+            return VentaHandle.getVentasXUsuario(idUsuario);
+        }
     }
 }

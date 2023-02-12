@@ -9,11 +9,10 @@ namespace api_sistema_gestion.Controllers
     [ApiController]
     public class ProductoController : ControllerBase
     {
-        [HttpGet("/producto/{idUsuario}")]
+        [HttpGet("{idUsuario}")]
         public List<Producto> getProductosXUsuario(long idUsuario)
         {
-            List<Producto> productos = ProductoHandle.getProductosXUsuario(idUsuario);
-            return productos;
+            return ProductoHandle.getProductosXUsuario(idUsuario);
         }
         
         [HttpPost]

@@ -100,12 +100,8 @@ namespace api_sistema_gestion.Handle
 
                 conex.Open();
 
-                int resp = comandoPV.ExecuteNonQuery();
-
-                if (resp == 1)
-                {
-                    comandoV.ExecuteNonQuery();
-                }
+                comandoPV.ExecuteNonQuery();
+                comandoV.ExecuteNonQuery();
             }
 
             return true;
